@@ -2,8 +2,11 @@ typedef struct bitmaker {
     int count;
     unsigned char buff;
     unsigned char * bytes;
+    unsigned char * colors;
     int bytecount;
     int bytecapacity;
+    int curcolor;
+    unsigned char colorbuff;
 } bitmaker;
 
 void bitmaker_init(bitmaker * b);
