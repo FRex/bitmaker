@@ -51,7 +51,7 @@ static int internal_addBit(bitmaker * b, int v, int color)
 int bitmaker_addBit(bitmaker * b, int v)
 {
     b->curcolor = !b->curcolor;
-    return internal_addBit(b, v, b->curcolor);
+    return internal_addBit(b, !!v, b->curcolor);
 }
 
 void bitmaker_addBigBytes(bitmaker * b, int size, unsigned value)
